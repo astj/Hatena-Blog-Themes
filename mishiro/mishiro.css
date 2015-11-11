@@ -391,53 +391,48 @@ th {
 /* Base text color */
 /* Light text color */
 /* h1~h6 text color */
-/* Link text color */
-/* Link text color(hover) */
-/* Link text color(hover) */
+/* h1~h6 text color */
 /* Border color */
+/* underline for link */
+/* underline for link */
 /* button background */
 /* button hover backgroud */
 /* Common */
 html,
 body {
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', 'Meiryo', 'MS PGothic', sans-serif;
-  color: #454545;
+  color: #222;
   background-color: #fff;
 }
 a {
-  color: #1487bd;
+  color: #222;
+  text-decoration: none;
 }
 a:hover {
-  color: #0f5373;
-}
-a:visited {
-  color: #789dae;
+  border-bottom: 1px solid #999 !important;
 }
 h1 a,
 h2 a,
 h3 a,
 h4 a,
 h5 a,
-h6 a,
+h6 a {
+  color: #222;
+  border: none !important;
+}
 h1 a:hover,
 h2 a:hover,
 h3 a:hover,
 h4 a:hover,
 h5 a:hover,
-h6 a:hover,
-h1 a:visited,
-h2 a:visited,
-h3 a:visited,
-h4 a:visited,
-h5 a:visited,
-h6 a:visited {
-  color: #333;
-  text-decoration: none;
+h6 a:hover {
+  color: #444;
+  border: none !important;
 }
 a.keyword {
   text-decoration: none;
   border-bottom: 1px dotted #ddd;
-  color: #454545;
+  color: #222;
 }
 /* Buttons */
 .btn {
@@ -447,7 +442,7 @@ a.keyword {
   padding: 4px 10px 4px;
   margin-bottom: 0;
   line-height: 18px;
-  color: #454545;
+  color: #222;
   background-color: #fff;
   text-align: center;
   vertical-align: middle;
@@ -483,7 +478,7 @@ a.keyword {
   #globalheader-container に背景色や文字色を指定することでirameの中にも色が反映されます。
 */
 #globalheader-container {
-  background-color: #333;
+  background-color: #222;
   color: #fff;
   position: fixed;
   top: 0;
@@ -501,6 +496,7 @@ a.keyword {
 #container #content {
   display: block;
   *zoom: 1;
+  padding-top: 20px;
 }
 #container #content:after {
   display: block;
@@ -513,46 +509,43 @@ a.keyword {
 .globalheader-off #container {
   padding-top: 0;
 }
-/* 2カラムレイアウト */
+/* 1カラムレイアウト */
 #main {
-  width: 600px;
+  width: 100%;
+  float: none;
+}
+#box2 {
+  width: 100%;
+  float: none;
+  margin-top: 80px;
+}
+#box2-inner {
+  width: 960px;
+  display: block;
+  *zoom: 1;
+  overflow: hidden;
+}
+#box2-inner:after {
+  display: block;
+  visibility: hidden;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+.hatena-module {
+  text-align: left;
+  padding-right: 20px;
+  width: 300px;
   float: left;
 }
-#box2 {
-  width: 300px;
-  float: right;
+.hatena-module:nth-child(3n+1) {
+  clear: both;
 }
-/* 1カラムにしたい場合は下記のコメントアウトを外してください ----
-
-#main {
-    width: 100%;
-    float: none;
-}
-
-#box2 {
-    width: 100%;
-    float: none;
-}
-
-#box2-inner {
-    width: 960px;
-    .clearfix;
-    overflow: hidden;
-}
-
-.hatena-module {
-    text-align: left;
-    padding-right: 20px;
-    width: 300px;
-    float: left;
-
-    &:nth-child(3n+1) {
-        clear: both;
-    }
-}
-
----- END 1カラム */
 /* header */
+#blog-title-content {
+  text-align: center;
+}
 #blog-title {
   margin: 30px 0;
   padding: 20px 0;
@@ -560,12 +553,9 @@ a.keyword {
 #title {
   margin: 0;
 }
-#title a {
-  color: #454545;
-}
 #blog-description {
   font-weight: normal;
-  font-size: 80%;
+  font-size: 90%;
   margin: 5px 0 0 0;
 }
 /* ヘッダ画像を設定したとき */
@@ -588,7 +578,7 @@ a.keyword {
 /* entry */
 .entry {
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 .entry-header {
   padding: 0 0 10px 0;
@@ -607,17 +597,26 @@ a.keyword {
   margin-bottom: 10px;
 }
 .date a {
-  color: #1487bd;
+  color: #222;
   text-decoration: none;
   font-size: 90%;
 }
 /* カテゴリ */
 .categories {
   margin-top: 10px;
-  font-size: 80%;
 }
 .categories a {
-  color: #999;
+  color: #fff;
+  font-size: 70%;
+  background: #aaa;
+  padding: 3px 5px;
+  border-radius: 3px;
+  text-decoration: none;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin-right: 2px;
+  border: none !important;
 }
 .categories.no-categories {
   margin: 0;
@@ -635,7 +634,7 @@ a.keyword {
   padding: 4px 10px 4px;
   margin-bottom: 0;
   line-height: 18px;
-  color: #454545;
+  color: #222;
   background-color: #fff;
   text-align: center;
   vertical-align: middle;
@@ -658,13 +657,17 @@ a.keyword {
 }
 /* entry-content の中の書式 */
 .entry-content {
-  font-size: 95%;
-  line-height: 1.7;
+  font-size: 100%;
+  line-height: 2;
   padding-bottom: 10px;
+  letter-spacing: 0.02em;
   border-bottom: 1px solid #ddd;
 }
 .entry-content p {
   margin: 0 0 1em 0;
+}
+.entry-content a {
+  border-bottom: 1px solid #ccc;
 }
 .entry-content img {
   max-width: 100%;
@@ -686,15 +689,28 @@ a.keyword {
 }
 .entry-content h3 {
   font-size: 140%;
+  border-left: solid 0.3em;
+  margin-left: -0.5em;
+  padding-left: 0.3em;
 }
 .entry-content h4 {
-  font-size: 130%;
+  font-size: 120%;
+  border-bottom: #ddd solid 1px;
 }
 .entry-content h5 {
   font-size: 110%;
 }
 .entry-content h6 {
   font-size: 100%;
+}
+.entry-content .section:nth-child(3n) h3 {
+  border-color: #e84378 !important;
+}
+.entry-content .section:nth-child(3n+1) h3 {
+  border-color: #f9c03c !important;
+}
+.entry-content .section:nth-child(3n+2) h3 {
+  border-color: #4b6cb4 !important;
 }
 .entry-content table {
   border-collapse: collapse;
@@ -821,7 +837,7 @@ a.keyword {
   padding: 4px 10px 4px;
   margin-bottom: 0;
   line-height: 18px;
-  color: #454545;
+  color: #222;
   background-color: #fff;
   text-align: center;
   vertical-align: middle;
@@ -854,13 +870,6 @@ a.keyword {
   font-weight: bold;
   margin-bottom: 15px;
   font-size: 120%;
-}
-.hatena-module-title a {
-  color: #454545;
-  text-decoration: none;
-}
-.hatena-module-title a:hover {
-  text-decoration: underline;
 }
 /* Profile module */
 .hatena-module-profile .profile-icon {
@@ -917,7 +926,7 @@ a.keyword {
 }
 .hatena-module-search-box .search-module-input {
   padding: 5px;
-  color: #454545;
+  color: #222;
   background: none;
   border: none;
   outline: none;
@@ -943,7 +952,7 @@ a.keyword {
 }
 /* Pager */
 .pager {
-  margin: 1em 0;
+  margin: 1em 2em 2em;
   display: block;
   *zoom: 1;
 }
@@ -954,6 +963,9 @@ a.keyword {
   height: 0;
   clear: both;
   content: ".";
+}
+.pager a {
+  text-decoration: none;
 }
 .pager .pager-prev {
   float: left;
@@ -969,7 +981,6 @@ a.keyword {
 #footer {
   padding: 30px 0;
   text-align: center;
-  color: #999;
   line-height: 1.5;
   font-size: 80%;
 }
@@ -977,7 +988,8 @@ a.keyword {
   margin: 0;
 }
 #footer a {
-  color: #999;
+  color: #222;
+  text-decoration: none;
 }
 /* About ページ */
 .page-about dt {
@@ -994,9 +1006,20 @@ a.keyword {
 .page-archive .archive-entries .archive-entry {
   margin-bottom: 3em;
 }
+.page-archive .archive-entries .archive-entry:nth-child(3n) .entry-title {
+  border-color: #e84378 !important;
+}
+.page-archive .archive-entries .archive-entry:nth-child(3n+1) .entry-title {
+  border-color: #f9c03c !important;
+}
+.page-archive .archive-entries .archive-entry:nth-child(3n+2) .entry-title {
+  border-color: #4b6cb4 !important;
+}
 .page-archive .archive-entries .entry-title {
   font-size: 130%;
-  margin: 0 0 .5em;
+  margin: 0.5em 0 1em;
+  border-left: solid 0.3em;
+  padding-left: 0.3em;
 }
 .page-archive .archive-entries .categories {
   margin: 0 0 .5em;
@@ -1006,17 +1029,13 @@ a.keyword {
   line-height: 1.7em;
   font-size: 95%;
 }
-.page-archive .categories a {
-  color: #fff;
-  font-size: 70%;
-  background: #aaa;
-  padding: 3px 5px;
-  border-radius: 3px;
-  text-decoration: none;
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-  margin-right: 2px;
+iframe.embed-card {
+  margin-bottom: 0 !important;
+}
+/* avoid afc link double underline */
+.google-afc-image a,
+.google-afc-text a {
+  border: none !important;
 }
 /*  import media queries */
 /* Media Queries - Retina Display */
@@ -1027,17 +1046,6 @@ a.keyword {
   }
 }
 /* Media Queries - Tablet */
-@media (min-width: 768px) and (max-width: 1024px) {
-  #container {
-    width: 724px;
-  }
-  #main {
-    width: 460px;
-  }
-  #box2 {
-    width: 245px;
-  }
-}
 /* Media Queries - Small Tablet & Smartphone */
 @media (max-width: 767px) {
   #globalheader-container {

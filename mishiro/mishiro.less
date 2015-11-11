@@ -27,21 +27,22 @@ body {
 }
 
 a {
-    color: @link;
-    &:hover {
-        color: @hover;
-    }
-    &:visited {
-        color: @visited;
-    }
+  color: @text;
+  text-decoration: none;
+  &:hover {
+    border-bottom: 1px solid @link-underline-hover !important;
+  }
 }
 
-
 h1,h2,h3,h4,h5,h6 {
-    a,a:hover,a:visited {
-        color: @text-header;
-        text-decoration: none;
+  a {
+    color: @text-header;
+    border: none !important;
+    &:hover {
+      color: @text-header-hover;
+      border: none !important;
     }
+  }
 }
 
 a.keyword {
@@ -92,7 +93,7 @@ a.keyword {
 */
 
 #globalheader-container {
-    background-color: #333;
+    background-color: @text;
     color: #fff;
     position: fixed;
     top: 0;
@@ -110,7 +111,8 @@ a.keyword {
     padding-top: 37px; // グローバルヘッダを fixed にしているため
 
     #content {
-        .clearfix;
+      .clearfix;
+      padding-top: 20px;
     }
 }
 
@@ -118,19 +120,7 @@ a.keyword {
     padding-top: 0; // グローバルヘッダ非表示の時
 }
 
-/* 2カラムレイアウト */
-
-#main {
-    width: 600px;
-    float: left;
-}
-
-#box2 {
-    width: 300px;
-    float: right;
-}
-
-/* 1カラムにしたい場合は下記のコメントアウトを外してください ----
+/* 1カラムレイアウト */
 
 #main {
     width: 100%;
@@ -140,6 +130,7 @@ a.keyword {
 #box2 {
     width: 100%;
     float: none;
+    margin-top: 80px;
 }
 
 #box2-inner {
@@ -159,9 +150,11 @@ a.keyword {
     }
 }
 
----- END 1カラム */
-
 /* header */
+
+#blog-title-content {
+  text-align: center;
+}
 
 #blog-title {
     margin: 30px 0;
@@ -170,14 +163,11 @@ a.keyword {
 
 #title {
     margin: 0;
-    a {
-        color: @text;
-    }
 }
 
 #blog-description {
     font-weight: normal;
-    font-size: 80%;
+    font-size: 90%;
     margin: 5px 0 0 0;
 }
 
@@ -211,7 +201,7 @@ a.keyword {
 
 .entry {
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 .entry-header {
@@ -234,7 +224,7 @@ a.keyword {
     margin-bottom: 10px;
 
     a {
-        color: @link;
+        color: @text;
         text-decoration: none;
         font-size: 90%;
     }
@@ -244,9 +234,16 @@ a.keyword {
 
 .categories {
     margin-top: 10px;
-    font-size: 80%;
     a {
-        color: @text-light;
+      color: #fff;
+      font-size: 70%;
+      background: #aaa;
+      padding: 3px 5px;
+      border-radius: 3px;
+      text-decoration: none;
+      .inline-block;
+      margin-right: 2px;
+      border: none !important;
     }
     &.no-categories {
         margin: 0;  // カテゴリー無いとき
@@ -266,13 +263,18 @@ a.keyword {
 /* entry-content の中の書式 */
 
 .entry-content {
-    font-size: 95%;
-    line-height: 1.7;
+    font-size: 100%;
+    line-height: 2;
     padding-bottom: 10px;
+    letter-spacing: 0.02em;
     border-bottom: 1px solid @border;
 
     p {
         margin: 0 0 1em 0;
+    }
+
+    a {
+      border-bottom: 1px solid @link-underline;
     }
 
     img {
@@ -293,11 +295,18 @@ a.keyword {
     }
 
     h3 {
-        font-size: 140%;
+      font-size: 140%;
+
+      border-left: solid 0.3em;
+      margin-left: -0.5em;
+      padding-left: 0.3em;
+
+      // border-color は .section からのネストで決めます
     }
 
     h4 {
-        font-size: 130%;
+      font-size: 120%;
+      border-bottom: @border solid 1px;
     }
 
     h5 {
@@ -306,6 +315,18 @@ a.keyword {
 
     h6 {
         font-size: 100%;
+    }
+
+    .section {
+      &:nth-child(3n) h3 {
+        border-color: @ng-uduki !important;
+      }
+      &:nth-child(3n+1) h3 {
+        border-color: @ng-mio !important;
+      }
+      &:nth-child(3n+2) h3{
+        border-color: @ng-rin !important;
+      }
     }
 
     table {
@@ -369,7 +390,6 @@ a.keyword {
             line-height: 1.4;
         }
     }
-
 }
 
 /* entry-footer */
@@ -471,13 +491,6 @@ a.keyword {
     font-weight: bold;
     margin-bottom: 15px;
     font-size: 120%;
-    a {
-        color: @text;
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-        }
-    }
 }
 
 /* Profile module */
@@ -570,8 +583,12 @@ a.keyword {
 /* Pager */
 
 .pager {
-    margin: 1em 0;
+    margin: 1em 2em 2em;
     .clearfix;
+
+    a {
+      text-decoration: none;
+    }
 
     .pager-prev {
         float: left;
@@ -592,7 +609,6 @@ a.keyword {
 #footer {
     padding: 30px 0;
     text-align: center;
-    color: @text-light;
     line-height: 1.5;
     font-size: 80%;
 
@@ -601,7 +617,8 @@ a.keyword {
     }
 
     a {
-        color: @text-light;
+      color: @text;
+      text-decoration: none;
     }
 
 }
@@ -631,11 +648,24 @@ a.keyword {
 
         .archive-entry {
             margin-bottom: 3em;
+
+            &:nth-child(3n) .entry-title {
+              border-color: @ng-uduki !important;
+            }
+            &:nth-child(3n+1) .entry-title {
+              border-color: @ng-mio !important;
+            }
+            &:nth-child(3n+2) .entry-title {
+              border-color: @ng-rin !important;
+            }
         }
 
         .entry-title {
             font-size: 130%;
-            margin: 0 0 .5em;
+            margin: 0.5em 0 1em;
+
+            border-left: solid 0.3em;
+            padding-left: 0.3em;
         }
 
         .categories {
@@ -650,20 +680,17 @@ a.keyword {
 
     }
 
-    .categories a {
-        color: #fff;
-        font-size: 70%;
-        background: #aaa;
-        padding: 3px 5px;
-        border-radius: 3px;
-        text-decoration: none;
-        .inline-block;
-        margin-right: 2px;
-    }
 
 }
 
+iframe.embed-card {
+  margin-bottom: 0 !important;
+}
 
+/* avoid afc link double underline */
+.google-afc-image a, .google-afc-text a {
+  border: none !important;
+}
 
 /*  import media queries */
 @import "less/_media-queries.less";
