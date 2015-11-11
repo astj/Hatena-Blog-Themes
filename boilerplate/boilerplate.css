@@ -407,7 +407,7 @@ html,
 body {
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', 'Meiryo', 'MS PGothic', sans-serif;
   color: #454545;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 a {
   color: #1487bd;
@@ -436,12 +436,12 @@ h3 a:visited,
 h4 a:visited,
 h5 a:visited,
 h6 a:visited {
-  color: #333333;
+  color: #333;
   text-decoration: none;
 }
 a.keyword {
   text-decoration: none;
-  border-bottom: 1px dotted #dddddd;
+  border-bottom: 1px dotted #ddd;
   color: #454545;
 }
 /* Buttons */
@@ -453,7 +453,7 @@ a.keyword {
   margin-bottom: 0;
   line-height: 18px;
   color: #454545;
-  background-color: #ffffff;
+  background-color: #fff;
   text-align: center;
   vertical-align: middle;
   border-top-right-radius: 2px;
@@ -587,7 +587,7 @@ a.keyword {
   font-size: 90%;
 }
 #top-box .breadcrumb {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   padding: 10px;
 }
 /* entry */
@@ -598,7 +598,7 @@ a.keyword {
 .entry-header {
   padding: 0 0 10px 0;
   margin-bottom: 20px;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #ddd;
   position: relative;
 }
 .entry-title {
@@ -622,7 +622,7 @@ a.keyword {
   font-size: 80%;
 }
 .categories a {
-  color: #999999;
+  color: #999;
 }
 .categories.no-categories {
   margin: 0;
@@ -641,7 +641,7 @@ a.keyword {
   margin-bottom: 0;
   line-height: 18px;
   color: #454545;
-  background-color: #ffffff;
+  background-color: #fff;
   text-align: center;
   vertical-align: middle;
   border-top-right-radius: 2px;
@@ -666,7 +666,7 @@ a.keyword {
   font-size: 95%;
   line-height: 1.7;
   padding-bottom: 10px;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #ddd;
 }
 .entry-content p {
   margin: 0 0 1em 0;
@@ -718,7 +718,7 @@ a.keyword {
   background: #f5f5f5;
 }
 .entry-content blockquote {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   margin: 0 0 10px;
   padding: 20px;
 }
@@ -727,7 +727,7 @@ a.keyword {
   margin-bottom: 0;
 }
 .entry-content pre {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   margin: 0 0 10px;
   padding: 20px;
   white-space: pre;
@@ -758,10 +758,10 @@ a.keyword {
 }
 .entry-footer-section {
   font-size: 80%;
-  color: #999999;
+  color: #999;
 }
 .entry-footer-section a {
-  color: #999999;
+  color: #999;
 }
 .social-buttons,
 .entry-footer-html {
@@ -777,11 +777,11 @@ a.keyword {
 }
 .comment-box li {
   padding: 10px 0 10px 60px;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #ddd;
   position: relative;
 }
 .comment-box li:first-child {
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
 }
 .comment-box .read-more-comments {
   padding-left: 0;
@@ -813,11 +813,11 @@ a.keyword {
 }
 .comment-metadata {
   font-size: 80%;
-  color: #999999;
+  color: #999;
   margin: 0;
 }
 .comment-metadata a {
-  color: #999999;
+  color: #999;
 }
 .leave-comment-title {
   display: inline-block;
@@ -827,7 +827,7 @@ a.keyword {
   margin-bottom: 0;
   line-height: 18px;
   color: #454545;
-  background-color: #ffffff;
+  background-color: #fff;
   text-align: center;
   vertical-align: middle;
   border-top-right-radius: 2px;
@@ -900,7 +900,7 @@ a.keyword {
 }
 .hatena-urllist li {
   padding: 8px 0;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #ddd;
   line-height: 1.5;
 }
 .hatena-urllist li a {
@@ -908,7 +908,7 @@ a.keyword {
 }
 /* Search module */
 .hatena-module-search-box .search-form {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
@@ -974,7 +974,7 @@ a.keyword {
 #footer {
   padding: 30px 0;
   text-align: center;
-  color: #999999;
+  color: #999;
   line-height: 1.5;
   font-size: 80%;
 }
@@ -982,7 +982,7 @@ a.keyword {
   margin: 0;
 }
 #footer a {
-  color: #999999;
+  color: #999;
 }
 /* About ページ */
 .page-about dt {

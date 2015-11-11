@@ -1,0 +1,23 @@
+{
+  "name": "Hatena-Blog-Themes",
+  "version": "1.0.0",
+  "description": "はてなブログで使えるテーマ集です。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/astj/Hatena-Blog-Themes.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/astj/Hatena-Blog-Themes/issues"
+  },
+  "homepage": "https://github.com/astj/Hatena-Blog-Themes",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.3"
+  }
+}
