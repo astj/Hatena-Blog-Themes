@@ -4,20 +4,18 @@ var themeDirectoryNames = ['boilerplate', 'mishiro']; // 要素1個だとうま�
 var lessPattern = '/*.less';
 var watchPattern = '/**/*.less'; // less/以下の変更もwatchする
 
-var generateWatchRegexp = function() {
-    return '{' + themeDirectoryNames.join() + '}' + watchPattern;
+var directoryGlob = function() {
+    return '{' + themeDirectoryNames.join() + '}';
 };
 
 gulp.task('less', function() {
-    for (var directory of themeDirectoryNames) {
-        gulp.src(directory + lessPattern)
-            .pipe(less({
-            }))
-            .pipe(gulp.dest(directory));
-    }
+    gulp.src(directoryGlob() + lessPattern)
+        .pipe(less({
+        }))
+        .pipe(gulp.dest('.'));
 });
 
 // 一度lessしておく
 gulp.task('default', ['less'], function() {
-    gulp.watch(generateWatchRegexp(), ['less']);
+    gulp.watch(directoryGlob() + watchPattern,  ['less']);
 });
