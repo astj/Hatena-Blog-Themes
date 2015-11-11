@@ -536,10 +536,10 @@ a.keyword {
 .hatena-module {
   text-align: left;
   padding-right: 20px;
-  width: 300px;
+  width: 450px;
   float: left;
 }
-.hatena-module:nth-child(3n+1) {
+.hatena-module:nth-child(2n+1) {
   clear: both;
 }
 /* header */
