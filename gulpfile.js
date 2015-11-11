@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
-var themeDirectoryNames = ['boilerplate', 'dummy']; // 増えたら増やす。1個だとなんかうまく動かないのでdummy入れておく。
+var themeDirectoryNames = ['boilerplate', 'mishiro']; // 要素1個だとうまく動かない気がする
 var lessPattern = '/*.less';
 var watchPattern = '/**/*.less'; // less/以下の変更もwatchする
 
