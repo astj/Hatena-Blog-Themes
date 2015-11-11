@@ -17,6 +17,7 @@ gulp.task('less', function() {
     }
 });
 
-gulp.task('default', function() {
+// 一度lessしておく
+gulp.task('default', ['less'], function() {
     gulp.watch(generateWatchRegexp(), ['less']);
 });
