@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
+var plumber = require('gulp-plumber');
 var themeDirectoryNames = ['boilerplate', 'mishiro']; // 要素1個だとうまく動かない気がする
 var lessPattern = '/*.less';
 var watchPattern = '/**/*.less'; // less/以下の変更もwatchする
@@ -10,6 +11,7 @@ var directoryGlob = function() {
 
 gulp.task('less', function() {
     gulp.src(directoryGlob() + lessPattern)
+        .pipe(plumber())
         .pipe(less({
         }))
         .pipe(gulp.dest('.'));
