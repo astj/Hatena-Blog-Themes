@@ -1056,14 +1056,6 @@ iframe.embed-card {
     word-wrap: break-word;
     overflow: hidden;
   }
-  #main {
-    width: 100%;
-    float: none;
-  }
-  #box2 {
-    width: 100%;
-    float: none;
-  }
   #box2-inner {
     width: 100%;
   }
