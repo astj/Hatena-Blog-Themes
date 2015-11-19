@@ -9,7 +9,7 @@
 
 /* Media Queries - Tablet */
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 767px) and (max-width: 1024px) {
 
 }
 
@@ -17,14 +17,14 @@
 
 @media (max-width: 767px) {
 
-    #globalheader-container {
-        position: static;
-    }
-
     #container {
-        width: 93.75%;
+        // スマホではみださないようにするやつ
         word-wrap: break-word;
         overflow: hidden;
+    }
+
+    #globalheader-container {
+        position: static;
     }
 
     #box2-inner {

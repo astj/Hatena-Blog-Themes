@@ -487,7 +487,8 @@ a.keyword {
 }
 /* container */
 #container {
-  width: 940px;
+  width: 93.75%;
+  max-width: 940px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
@@ -1048,13 +1049,12 @@ iframe.embed-card {
 /* Media Queries - Tablet */
 /* Media Queries - Small Tablet & Smartphone */
 @media (max-width: 767px) {
-  #globalheader-container {
-    position: static;
-  }
   #container {
-    width: 93.75%;
     word-wrap: break-word;
     overflow: hidden;
+  }
+  #globalheader-container {
+    position: static;
   }
   #box2-inner {
     width: 100%;
