@@ -245,6 +245,24 @@ a.keyword {
       .inline-block;
       margin-right: 2px;
       border: none !important;
+      &:nth-child(6n) {
+        background: @cp-ng;
+      }
+      &:nth-child(6n+1) {
+        background: @cp-ll;
+      }
+      &:nth-child(6n+2) {
+        background: @cp-re;
+      }
+      &:nth-child(6n+3) {
+        background: @cp-ci;
+      }
+      &:nth-child(6n+4) {
+        background: @cp-dr;
+      }
+      &:nth-child(6n+5) {
+        background: @cp-as;
+      }
     }
     &.no-categories {
         margin: 0;  // カテゴリー無いとき
