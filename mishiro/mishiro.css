@@ -618,6 +618,7 @@ a.keyword {
   *zoom: 1;
   margin-right: 2px;
   border: none !important;
+  opacity: .6;
 }
 .categories a:nth-child(6n+1) {
   background: #fb4b4b;
