@@ -619,22 +619,22 @@ a.keyword {
   margin-right: 2px;
   border: none !important;
 }
-.categories a:nth-child(6n) {
+.categories a:nth-child(6n+1) {
   background: #fb4b4b;
 }
-.categories a:nth-child(6n+1) {
+.categories a:nth-child(6n+2) {
   background: #50b4e5;
 }
-.categories a:nth-child(6n+2) {
+.categories a:nth-child(6n+3) {
   background: #b17aed;
 }
-.categories a:nth-child(6n+3) {
+.categories a:nth-child(6n+4) {
   background: #ff80aa;
 }
-.categories a:nth-child(6n+4) {
+.categories a:nth-child(6n+5) {
   background: #ff9580;
 }
-.categories a:nth-child(6n+5) {
+.categories a:nth-child(6n+6) {
   background: #1099dc;
 }
 .categories.no-categories {
