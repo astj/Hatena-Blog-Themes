@@ -986,12 +986,12 @@ a.keyword {
 .pager a {
   text-decoration: none;
 }
-.pager .pager-prev {
+.pager.permalink .pager-prev {
   float: left;
   text-align: left;
   width: 45%;
 }
-.pager .pager-next {
+.pager.permalink .pager-next {
   float: right;
   text-align: right;
   width: 45%;
