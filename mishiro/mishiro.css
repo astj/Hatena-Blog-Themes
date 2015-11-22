@@ -974,6 +974,7 @@ a.keyword {
   margin: 1em 2em 2em;
   display: block;
   *zoom: 1;
+  text-align: center;
 }
 .pager:after {
   display: block;
