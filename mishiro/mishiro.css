@@ -770,7 +770,8 @@ a.keyword {
   background: transparent;
   font-family: 'Monaco', 'Consolas', 'Courier New', Courier, monospace, sans-serif;
 }
-.entry-content code {
+.entry-content code,
+.entry-content pre.code {
   font-size: 90%;
   margin: 0 2px;
   padding: 0 5px;
