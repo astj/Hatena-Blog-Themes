@@ -762,14 +762,16 @@ a.keyword {
   padding: 20px;
   white-space: pre;
 }
-.entry-content pre > code,
-.entry-content pre.code {
-  font-size: 90%;
+.entry-content pre > code {
   margin: 0;
   padding: 0;
   white-space: pre;
   border: 0;
   background: transparent;
+  font-family: 'Monaco', 'Consolas', 'Courier New', Courier, monospace, sans-serif;
+}
+.entry-content pre.code {
+  font-size: 90%;
   font-family: 'Monaco', 'Consolas', 'Courier New', Courier, monospace, sans-serif;
 }
 .entry-content code {
