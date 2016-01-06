@@ -762,7 +762,9 @@ a.keyword {
   padding: 20px;
   white-space: pre;
 }
-.entry-content pre > code {
+.entry-content pre > code,
+.entry-content pre.code {
+  font-size: 90%;
   margin: 0;
   padding: 0;
   white-space: pre;
@@ -770,8 +772,7 @@ a.keyword {
   background: transparent;
   font-family: 'Monaco', 'Consolas', 'Courier New', Courier, monospace, sans-serif;
 }
-.entry-content code,
-.entry-content pre.code {
+.entry-content code {
   font-size: 90%;
   margin: 0 2px;
   padding: 0 5px;
